@@ -17,11 +17,11 @@ export class AddComponent implements OnInit {
   }
   onsubmit(data) {
    console.log(data);
-   this.service.update(data)
+   this.service.add(data)
    .subscribe(data=>  this.router.navigate(['']),
    error =>
    console.log(error)
-  )
+  ) ;this. router.navigate(['/']);
   
   
 

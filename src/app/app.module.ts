@@ -11,15 +11,18 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
 
 
 export const routes : Routes=[
   {path: '',component: HomeComponent, pathMatch:  'full'},
     {path: 'list', component: ListComponent, pathMatch:  'full'},
     {path: 'home', component: HomeComponent, pathMatch:  'full'},
+    {path: 'edit/:id', component: EditComponent, pathMatch:  'full'},
+    {path: 'edit', component: EditComponent, pathMatch:  'full'},
   {path: 'add', component: AddComponent,},
-  { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: '**', component: HomeComponent }
+  { path: '', redirectTo: '', pathMatch: 'full' }
+  
   
 ];
 
@@ -28,7 +31,8 @@ export const routes : Routes=[
     AppComponent,
     ListComponent,
     AddComponent,
-    HomeComponent
+    HomeComponent,
+    EditComponent
     
   ],
   imports: [

@@ -11,6 +11,9 @@ import { from } from 'rxjs';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+ 
+array:User[];
   user:User[];
   id: number;
   @Input() showMePartially: boolean;
@@ -33,7 +36,14 @@ console.log(this.user);
       console.log(data);
 
 
-    });
+    }); this. router.navigate(['/home']);
+  }
+  edit(user: User) {
+    this.id = user.id;
+    this.router.navigate(['edit/' + this.id]);
+
+
+
   }
 
 }
